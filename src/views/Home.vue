@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/img/channeltwo/logo.png">
-    <HelloWorld msg="channelone"/>
+    <h1>{{ channel }}</h1>
+    <img alt="Vue logo" :src=logoUrl>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      logoUrl: require('../assets/img/yasuo/logo.png')
+    }
+  },
+  computed: {
+    channel () {
+      console.log(process.env)
+      return process.env.VUE_APP_CHANNEL_NAME
+    }
   }
 }
 </script>
