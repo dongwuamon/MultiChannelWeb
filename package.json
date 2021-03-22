@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --mode serve-jin",
     "serve-yasuo": "vue-cli-service serve --mode serve-yasuo",
+    "serve-garen": "vue-cli-service serve --mode serve-garen",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
