@@ -17,6 +17,7 @@ export default {
   computed: {
     channel () {
       console.log(process.env)
+      console.log(process.env.VUE_APP_CHANNEL_NAME === 'jin')
       return process.env.VUE_APP_CHANNEL_NAME
     }
   }
