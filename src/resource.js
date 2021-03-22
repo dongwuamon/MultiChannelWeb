@@ -1,4 +1,4 @@
 const photo = {
-  logo: require('./assets/img/garen/logo.png')
+  logo: require('./assets/img/logo.png')
 }
 export default photo

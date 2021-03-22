@@ -7,7 +7,7 @@ const envConfig = `NODE_ENV='${nodeEnv}'
 VUE_APP_CHANNEL='${channel}'`
 fs.writeFile('.env.config', envConfig, function () { })
 
-// resource
+// resource.js
 const path = (channel === 'jin') ? '' : (channel + '/')
 const resource = `const photo = {
   logo: require('./assets/img/${path}logo.png')
