@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode serve-jin",
-    "serve-yasuo": "vue-cli-service serve --mode serve-yasuo",
-    "serve-garen": "vue-cli-service serve --mode serve-garen",
-    "build": "vue-cli-service build",
+    "serve": "node outputBuildConfig dev jin && vue-cli-service serve --mode config",
+    "serve-yasuo": "node outputBuildConfig dev yasuo &&  vue-cli-service serve --mode config",
+    "serve-garen": "node outputBuildConfig dev garen &&  vue-cli-service serve --mode config",
+    "build": "node outputBuildConfig production jin && vue-cli-service build --mode config",
+    "build-yasuo": "node outputBuildConfig production yasuo &&  vue-cli-service build --mode config",
+    "build-garen": "node outputBuildConfig production garen &&  vue-cli-service build --mode config",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

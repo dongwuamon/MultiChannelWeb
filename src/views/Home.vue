@@ -6,19 +6,22 @@
 </template>
 
 <script>
-
+import photo from '../resource'
 export default {
   name: 'Home',
   data () {
     return {
-      logoUrl: require('../assets/img/yasuo/logo.png')
+      logoUrl: ''
     }
+  },
+  mounted () {
+    this.logoUrl = photo.logo
   },
   computed: {
     channel () {
       console.log(process.env)
-      console.log(process.env.VUE_APP_CHANNEL_NAME === 'jin')
-      return process.env.VUE_APP_CHANNEL_NAME
+      console.log(process.env.VUE_APP_CHANNEL === 'jin')
+      return process.env.VUE_APP_CHANNEL
     }
   }
 }
