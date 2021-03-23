@@ -7,6 +7,13 @@ const envConfig = `NODE_ENV='${nodeEnv}'
 VUE_APP_CHANNEL='${channel}'`
 fs.writeFile('.env.config', envConfig, function () { })
 
+// buildConfig.json
+const buildConfig = `{
+  "channel": "${channel}"
+}
+`
+fs.writeFile('buildConfig.json', buildConfig, function () { })
+
 // resource.js
 const path = (channel === 'jin') ? '' : (channel + '/')
 const resource = `const photo = {
