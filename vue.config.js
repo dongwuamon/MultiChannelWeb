@@ -6,7 +6,7 @@ const channel = buildConfig.channel
 console.log('channel=' + channel)
 
 // entry
-// const entry = 'src/entry/' + channel + '.js'
+// const entry = 'src/entry/main-' + channel + '.js'
 const entry = 'src/entry/main.js'
 console.log('entry=' + entry)
 
