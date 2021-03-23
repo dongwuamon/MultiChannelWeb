@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import routes from './yasuo'
+import routes from './jin'
 
 Vue.use(VueRouter)
 

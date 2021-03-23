@@ -12,7 +12,7 @@ const buildConfig = `{
   "channel": "${channel}"
 }
 `
-fs.writeFile('buildConfig.json', buildConfig, function () { })
+fs.writeFile('./channel/buildConfig.json', buildConfig, function () { })
 
 // resource.js
 // const path = (channel === 'jin') ? '' : (channel + '/')

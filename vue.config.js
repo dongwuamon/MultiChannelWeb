@@ -1,4 +1,4 @@
-const buildConfig = require('./buildConfig.json')
+const buildConfig = require('./channel/buildConfig.json')
 const channel = buildConfig.channel
 module.exports = {
   outputDir: 'dist',
