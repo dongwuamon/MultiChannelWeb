@@ -1,6 +1,9 @@
+console.log('---------- outputBuildConfig.js start ----------')
 const fs = require('fs')
 const nodeEnv = process.argv[2]
 const channel = process.argv[3]
+console.log('nodeEnv=' + nodeEnv)
+console.log('channel=' + channel)
 
 // .env.config
 const envConfig = `NODE_ENV='${nodeEnv}'
@@ -39,3 +42,4 @@ const router = new VueRouter({
 export default router
 `
 fs.writeFile('./src/router/index.js', index, function () {})
+console.log('---------- outputBuildConfig.js end ----------')
