@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import routes from './jin'
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/detail/Home.vue')
+  }
+]
 
 Vue.use(VueRouter)
 
