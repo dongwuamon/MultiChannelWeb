@@ -1,12 +1,13 @@
 <template>
   <div class="home">
+    <h1>jin</h1>
     <h1>{{ channel }}</h1>
     <img alt="Vue logo" :src=logoUrl>
   </div>
 </template>
 
 <script>
-import photo from '../resource'
+import photo from '@/resource'
 export default {
   name: 'Home',
   data () {

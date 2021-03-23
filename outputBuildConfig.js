@@ -15,10 +15,25 @@ const buildConfig = `{
 fs.writeFile('buildConfig.json', buildConfig, function () { })
 
 // resource.js
-const path = (channel === 'jin') ? '' : (channel + '/')
+// const path = (channel === 'jin') ? '' : (channel + '/')
 const resource = `const photo = {
-  logo: require('./assets/img/${path}logo.png')
+  logo: require('./assets/img-${channel}/logo.png')
 }
 export default photo
 `
 fs.writeFile('./src/resource.js', resource, function () { })
+
+// index.js
+const index = `import Vue from 'vue'
+import VueRouter from 'vue-router'
+import routes from './${channel}'
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes
+})
+
+export default router
+`
