@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>yasuo</h1>
+    <h1>{{ channel }}</h1>
     <img alt="Vue logo" :src=logoUrl>
   </div>
 </template>

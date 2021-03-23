@@ -26,6 +26,7 @@ fs.writeFile('./src/resource.js', resource, function () { })
 // index.js
 const index = `import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import routes from './${channel}'
 
 Vue.use(VueRouter)
@@ -37,3 +38,4 @@ const router = new VueRouter({
 
 export default router
 `
+fs.writeFile('./src/router/index.js', index, function () {})
