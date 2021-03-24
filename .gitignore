@@ -7,7 +7,6 @@ node_modules
 .env.local
 .env.*.local
 .env.config
-buildConfig.json
 
 # Log files
 npm-debug.log*
@@ -23,3 +22,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# channel
+/channel/buildConfig.json
+/src/resource.js

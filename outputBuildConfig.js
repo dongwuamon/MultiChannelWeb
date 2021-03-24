@@ -22,14 +22,7 @@ fs.readFile('./channel/resource.js', 'utf-8', function(err, data) {
   if(err) {
     console.log(err)
   } else {
-    console.log(typeof data)
     const resourceOutput = data.replace(/\$channel\$/, channel)
     fs.writeFile('./src/resource.js', resourceOutput, function () { })
   }
 })
-// const resourceOutput = `const photo = {
-//   logo: require('./assets/img-${channel}/logo.png')
-// }
-// export default photo
-// `
-// fs.writeFile('./src/resource.js', resourceInput, function () { })
