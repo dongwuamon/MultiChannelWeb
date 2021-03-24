@@ -22,7 +22,8 @@ fs.readFile('./channel/resource.js', 'utf-8', function(err, data) {
   if(err) {
     console.log(err)
   } else {
-    const resourceOutput = `${data}`
+    console.log(typeof data)
+    const resourceOutput = eval(data)
     fs.writeFile('./src/resource.js', resourceOutput, function () { })
   }
 })
