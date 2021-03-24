@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import photo from '@/resource'
+import resource from '@/resource'
 export default {
   name: 'Home',
   data () {
@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted () {
-    this.logoUrl = photo.logo
+    this.logoUrl = resource.logo
   },
   computed: {
     channel () {

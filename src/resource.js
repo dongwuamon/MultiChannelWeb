@@ -1,4 +1,4 @@
-const photo = {
-  logo: require('./assets/img-yasuo/logo.png')
+const resource = {
+  logo: require('./assets/img-jin/logo.png')
 }
-export default photo
+export default resource

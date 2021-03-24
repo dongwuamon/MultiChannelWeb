@@ -1,4 +1,4 @@
-const photo = {
+const resource = {
   logo: require('./assets/img-$channel$/logo.png')
 }
-export default photo
+export default resource
