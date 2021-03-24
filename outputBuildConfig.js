@@ -18,10 +18,17 @@ const buildConfig = `{
 fs.writeFile('./channel/buildConfig.json', buildConfig, function () { })
 
 // resource.js
-// const path = (channel === 'jin') ? '' : (channel + '/')
-const resource = `const photo = {
-  logo: require('./assets/img-${channel}/logo.png')
-}
-export default photo
-`
-fs.writeFile('./src/resource.js', resource, function () { })
+fs.readFile('./channel/resource.js', 'utf-8', function(err, data) {
+  if(err) {
+    console.log(err)
+  } else {
+    const resourceOutput = `${data}`
+    fs.writeFile('./src/resource.js', resourceOutput, function () { })
+  }
+})
+// const resourceOutput = `const photo = {
+//   logo: require('./assets/img-${channel}/logo.png')
+// }
+// export default photo
+// `
+// fs.writeFile('./src/resource.js', resourceInput, function () { })
