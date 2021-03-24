@@ -17,6 +17,9 @@ module.exports = {
       entry: entry,
       template: 'public/index.html'
     }
+  },
+  css: {
+    extract: false
   }
 }
 console.log('---------- vue.config.js end ----------')
