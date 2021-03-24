@@ -23,7 +23,7 @@ fs.readFile('./channel/resource.js', 'utf-8', function(err, data) {
     console.log(err)
   } else {
     console.log(typeof data)
-    const resourceOutput = eval(data)
+    const resourceOutput = data.replace(/\$channel\$/, channel)
     fs.writeFile('./src/resource.js', resourceOutput, function () { })
   }
 })
